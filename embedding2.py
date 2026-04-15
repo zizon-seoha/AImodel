@@ -12,9 +12,7 @@ import pandas as pd
 from sentence_transformers import SentenceTransformer
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
  
-# ──────────────────────────────────────────────
-# 설정
-# ──────────────────────────────────────────────
+
 CSV_PATH = r"C:\Users\master\Desktop\GSM 길잡이 AI 챗봇을 위한 데이터(응답) - 설문지 응답 시트1 (6).csv"
 EMBED_MODEL     = "snunlp/KR-SBERT-V40K-klueNLI-augSTS"   # 한국어 SBERT
 GEN_MODEL       = "LGAI-EXAONE/EXAONE-3.5-2.4B-Instruct"  # 한국어 LLM
@@ -24,9 +22,7 @@ TOP_K           = 5      # 검색할 청크 수
 MAX_NEW_TOKENS  = 512    # 생성 최대 토큰
 DEVICE          = "cuda" if torch.cuda.is_available() else "cpu"
  
-# ──────────────────────────────────────────────
-# 노이즈 필터
-# ──────────────────────────────────────────────
+
 NOISE_ANSWERS = {
     "엄.. 기억이 안나요", "딱히 없습니다", "딱히 없었던거 같은데",
     "흠.. 한번에 성공해서...", "없음", "-", "n/a", "",
