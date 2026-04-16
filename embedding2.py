@@ -13,7 +13,7 @@ from sentence_transformers import SentenceTransformer
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
  
 
-CSV_PATH = r"C:\Users\master\Desktop\GSM 길잡이 AI 챗봇을 위한 데이터(응답) - 설문지 응답 시트1 (6).csv"
+CSV_PATH = r"file:///C:/Users/master/Documents/rag_document%20(1).pdf"
 EMBED_MODEL     = "snunlp/KR-SBERT-V40K-klueNLI-augSTS"   # 한국어 SBERT
 GEN_MODEL       = "LGAI-EXAONE/EXAONE-3.5-2.4B-Instruct"  # 한국어 LLM
 FAISS_INDEX     = "gsm_faiss.index"
